@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: hsl(0, 0%, 100%);
+    --tt-color: hsla(240, 6%, 21%, 1);
+
+    --bg-button: hsla(240, 9%, 89%, 1);
+    --tt-button: hsla(0, 0%, 100%, 1);
+    --bg-button-click: hsla(194, 97%, 31%, 1);
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body {
+    background-color: var(--bg-color);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+
+}
+
+body, section, span {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#app {
+    display: flex;
+    align-items: center;
+    gap: 19.2rem;
+}
+
+#timer {
+    width: 32.1rem;
+    height: 21.3rem;
+}
+
+#countdown {
+    font-size: 12.6rem;
+    display: flex;
+
+}
+
+#controls {
+    display: flex;
+    gap: 4rem;
+}
+
+.svgControls {
+    border: none;
+    background: transparent;
+    width: 4.8rem;
+    height: 4.8rem;
+}
+
+.svgControls:hover path{
+    fill: var(--bg-button-click);
+}
+
+#sounds {
+    width: 31rem;
+    height: 34rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+    
+}
+
+.sounds {
+    display: flex;
+    border: none;
+    width: 13.8rem;
+    height: 15.2rem;
+    border-radius: 2.4rem;
+    background-color: var(--bg-button);
+    align-items: center;
+}
+
+.sounds:hover{
+    background-color: var(--bg-button-click); 
+}
+
+.svg:hover path {
+    fill: white;
+}
+
+.sound-on {
+    background-color: var(--bg-button-click);
+    fill: white;
+}
+
+@media (max-width: 740px) {
+    #app {
+        gap: 10rem;
+        flex-direction: column;
+    }
+}
